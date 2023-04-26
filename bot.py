@@ -16,9 +16,13 @@ openai.api_key = "your_openai_api_key_here"
 async def on_ready():
     print(f"{bot.user} has connected to Discord!")
 
-@bot.command(name="goal")
+@bot.command(name="setgoal")
 async def set_goal(ctx, *, goal):
     await ctx.send(f"Goal set: {goal}")
+
+@bot.command(name="changegoal")
+async def change_goal(ctx, *, new_goal):
+    await ctx.send(f"Goal changed to: {new_goal}")
 
 if __name__ == "__main__":
     # Load your discord token from an environment variable or secret management service
