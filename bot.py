@@ -1,9 +1,7 @@
 import discord
 from discord.ext import commands
 import openai
-import pandas as pd
-import sqlalchemy
-
+import language_model
 # Set up bot
 intents = discord.Intents.default()
 intents.typing = False
